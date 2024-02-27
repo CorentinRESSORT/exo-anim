@@ -1,0 +1,232 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+/*  SETTING UP */
+main
+{
+    display: flex;
+}
+
+main  > div
+{
+    width: 50vw;
+    height: 100vh;
+}
+
+.class2
+{
+    background-color: #000;
+}
+
+/*      CLASS 1       */
+
+.class1
+{
+    font-size: 25rem;
+    text-align: center;
+}
+
+.class1 span
+{
+    position: relative;
+    bottom: 0rem;
+}
+
+
+.class1 span:nth-child(1)
+{
+    animation: loadclass1 .6s ease-in-out infinite;
+}
+
+.class1 span:nth-child(2)
+{
+    animation: loadclass1 .6s .1s ease-in-out infinite;
+}
+
+.class1 span:nth-child(3)
+{
+    animation: loadclass1 .6s .2s ease-in-out infinite;
+}
+@keyframes loadclass1 {
+
+    50%{
+        
+        bottom: 2rem; 
+    }
+    60%{
+        
+        bottom: 2rem; 
+    }
+}
+
+/*      CLASS 2       */
+
+.class2
+{
+    position: relative;
+}
+.class2 > div
+{
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.circle1
+{
+    width: 80px;
+    aspect-ratio: 1/1;
+    border: 5px solid transparent;
+    border-top:5px solid red;
+
+    left: 10px;
+    animation: turn .8s linear infinite;
+}
+
+.circle2
+{
+    width: 60px;
+    aspect-ratio: 1/1;
+    
+    top: 10px;
+    left: 20px;
+    border: 5px solid transparent;
+    border-top:5px solid red;
+
+    animation: turn 1s linear infinite;
+}
+
+.circle3
+{
+    top: 20px;
+    left: 30px;
+    width: 40px;
+    aspect-ratio: 1/1;
+
+    border: 5px solid transparent;
+    border-top:5px solid pink;
+
+    animation: turn 1.3s linear infinite;
+}
+
+
+@keyframes turn {
+    
+    100%
+    {
+        rotate: 360deg;
+    }
+}
+
+
+/* ------------------------------------------------- */
+/*                      FOOTER                       */
+/* ------------------------------------------------- */
+
+footer
+{
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+    animation: rainbowback 10s reverse infinite;
+}
+
+p
+{
+    width: max-content;
+    position: absolute;
+    top: 50vh;
+    font-size: 5rem;
+
+    animation: gifp 10s linear infinite, rainbow 10s infinite ;
+}
+
+@keyframes gifp {
+    0%
+    {
+        left: 0vw
+    }
+    100%
+    {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rainbow {
+    
+    0%
+    {   color:red;
+    }
+    14%{
+        color: purple;
+    }
+    28%
+    {
+        color: indigo;
+    }
+    42%
+    {
+        color: blue;
+    }
+    56%
+    {
+        color: green;
+    }
+    70%
+    {
+        color: yellow;
+    }
+    84%
+    {
+        color: orange;
+    }
+
+    100%
+    {
+        color: red;
+    }
+
+}
+
+@keyframes rainbowback {
+    
+    0%
+    {   background-color:red;
+    }
+    14%{
+        background-color: purple;
+    }
+    28%
+    {
+        background-color: indigo;
+    }
+    42%
+    {
+        background-color: blue;
+    }
+    56%
+    {
+        background-color: green;
+    }
+    70%
+    {
+        background-color: yellow;
+    }
+    84%
+    {
+        background-color: orange;
+    }
+
+    100%
+    {
+        background-color: red;
+    }
+
+}
